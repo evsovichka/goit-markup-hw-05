@@ -545,7 +545,7 @@ a {
 
 .modal-overlay {
   position: fixed;
-  width: 100%;
+  max-width: 100%;
   top: 0;
   left: 0;
   height: 100%;
@@ -689,7 +689,6 @@ a {
 }
 
 .lable-check {
-  display: flex;
   align-items: center;
   font-size: 12px;
   line-height: 1.17;
@@ -705,6 +704,7 @@ a {
 }
 
 .check-yes {
+  display: inline-flex;
   width: 16px;
   height: 16px;
   border-radius: 2px;
