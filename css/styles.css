@@ -45,8 +45,8 @@ a {
 }
 
 .container {
-  max-width: 1158px;
-  padding: 0 15px;
+  width: 320px;
+  padding: 0 16px;
   margin: 0 auto;
 }
 
@@ -200,39 +200,34 @@ a {
 /* features */
 
 .features {
-  padding: 120px 0;
+  padding: 96px 0;
 }
 .features-list {
   display: flex;
-  gap: 24px;
+  flex-wrap: wrap;
+  gap: 72px;
 }
 .features-list-item {
-  width: calc((100% - 3 * 24px) / 4);
+  width: 100%;
 }
-.icon {
-  fill: #2e2f42;
-}
+
 .icon-box {
-  border: 1px solid #8e8f99;
-  border-radius: 4px;
-  background-color: #f4f4fd;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 264px;
-  height: 112px;
-  margin-bottom: 8px;
+  display: none;
 }
+
 .features-list-title {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.1;
   letter-spacing: 0.02em;
-  color: #2e2f42;
+  text-align: center;
   margin-bottom: 8px;
+  color: #2e2f42;
 }
 
 .features-list-text {
+  color: #434455;
+  font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -751,4 +746,60 @@ a {
 .btn-send:focus,
 .btn-send:hover {
   background-color: #404bbf;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+  .features-list {
+    gap: 72px 24px;
+  }
+
+  .features-list-item {
+    width: calc((100% - 24px) / 2);
+  }
+
+  .features-list-title {
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .container {
+    width: 1160px;
+  }
+
+  .features {
+    padding: 120px 0;
+  }
+
+  .features-list {
+    gap: 24px;
+    margin-left: auto;
+  }
+  .features-list-item {
+    width: calc((100% - 3 * 24px) / 4);
+  }
+  .icon-box {
+    display: flex;
+    border: 1px solid #8e8f99;
+    border-radius: 4px;
+    background-color: #f4f4fd;
+    align-items: center;
+    justify-content: center;
+    width: 264px;
+    height: 112px;
+    margin-bottom: 8px;
+    fill: #2e2f42;
+  }
+
+  .features-list-title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+  }
+  .features-list-text {
+    font-weight: 400;
+  }
 }
